@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+
     <meta charset="UTF-8">
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script> <!-- Le javascript est déjà lié. -->
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"> <!-- Le javascript est déjà lié. -->
+
   </head>
   <body>
+<div class="container">
+
+  <div class="header flex">
+
     <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
-    <div>
+
+    <div class="flex">
       <p class="nav-item">
-        <a class="nav-link active" href="#">Ma liste</a>
+        <a class="nav-link active text" href="#">Ma liste</a>
       </p>
-      <p class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
+
+      <p class="nav-item ">
+        <a class="nav-link text1" aria-current="page" href="#">Listes de mes ami.e.s</a>
       </p>
     </div>
-    <h3>Liste de cadeaux de Maryse Mongeau</h3>
-    <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                    ami.e.s.</p>
-    <form method="post">                    <!-- Ajouter la balise form, la méthode post va permettre d'envoyer par courriel -->
+
+  </div>
+
+    <form method="post" class="flex">       <!-- Ajouter la balise form, la méthode post va permettre d'envoyer par courriel -->
+<div>
+      <h3>Liste de cadeaux de Maryse Mongeau</h3>
+
+      <p class="text-muted ms-1 mb-3 special">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+        ami.e.s.</p>
+
       <h4 class="mb-3">Ajouter un item à la liste</h4>
+
       <div class="mb-3">
         <p>Description :</p>
         <input type="text" id="desc" />
       </div>
+
       <div class="mb-4">
         <span>Valeur estimée ($) :</span><br>
         <input type="number" id="valeur">
       </div>
+
       <div class="d-grid gap-2">
         <input type="button" value="Ajouter" onclick="ajouter()" />  <!-- Cliquer sur le bouton va appeler la fonction ajouter. -->
         <br>
         <input type="reset" value="Annuler" />      <!-- Remplacer les <button> par des <input ... -->
       </div>
+</div>
+<div class="droite">
       <h3>Ma liste</h3>
+
       <div class="list" id="maListe">                   <!-- Remplacer p par div -->
-        <p>Crocs des fêtes : <span>14$</span></p>
-        <p>Une tuque des fêtes : <span>42$</span></p>
-        <p>Un chandail laid des fêtes : <span>25$</span></p>
+        <p class="case">Crocs des fêtes : <span class="vert">14$</span></p>
+        <p class="case1">Une tuque des fêtes : <span class="vert">42$</span></p>
+        <p class="case">Un chandail laid des fêtes : <span class="vert">25$</span></p>
       </div>
-      <p>Total : <span id="total">81</span>$</p>  <!-- Sortir le taotal de la liste et lui donner un id -->
+
+
+      <p>Total : <span id="total">81</span>$</p><!-- Sortir le taotal de la liste et lui donner un id -->
+
       <p class="col-form-label h3">Destinataire:</p>
+
       <input id="email" type="text" onblur="ajouterEmail()" /> <!-- Ajouter l'email au formulaire -->
+
       <div>
         <input type="submit" value="Confirmer et envoyer" /> <!-- Envoyer le formulaire par courriel -->
         <input onclick="effacer()" type="submit" value="Recommencer" /> <!-- Efface le courriel et refresh la page -->
@@ -53,6 +79,8 @@
       <input hidden name="Item_1" value="Crocs des fetes">
       <input hidden name="Item_2" value="Une tuque des fetes">
       <input hidden name="Item_3" value="Un chandail laid des fetes">
+</div>
     </form>
+</div>
   </body>
 </html>
