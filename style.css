@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     margin-top: 200px;
     background-color: white;
-    padding: 0px 10px 10px 15px;
+    padding: 0px 10px 10px 10px;
 }
 
 a {
@@ -82,7 +82,7 @@ p {
 
 .droite {
     margin-left: 150px;
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .case {
@@ -112,8 +112,8 @@ p {
 }
 
 input {
-    width: 600px;
-    height: 48px;
+    width: 550px;
+    height: 40px;
 }
 
 
